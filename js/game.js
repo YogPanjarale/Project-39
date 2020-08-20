@@ -52,10 +52,16 @@ class Game{
                      textSize(30)
                      fill(255,230,230)
                      text("Scores",10,30)
-                     textSize(25);                    
+                        if(allPlayers.player1.score<allPlayers.player2.score){
                      text(allPlayers.player1.name +" :"+allPlayers.player1.score,10,80); 
                      fill(255,230,230) 
                      text(allPlayers.player2.name +" :"+allPlayers.player2.score,10,60); 
+                     }
+                     else if(allPlayers.player1.score>allPlayers.player2.score){
+                        text(allPlayers.player2.name +" :"+allPlayers.player2.score,10,80); 
+                        fill(255,230,230) 
+                        text(allPlayers.player1.name +" :"+allPlayers.player1.score,10,60); 
+                        }
                  pop() } 
                  for(var plr in allPlayers){
                     
